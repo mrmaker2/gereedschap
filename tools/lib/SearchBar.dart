@@ -10,8 +10,12 @@ class _SearchBarState extends State<SearchBar> {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        labelText: "zoek...",
-      ),
+          border: new OutlineInputBorder(
+            
+              borderSide: new BorderSide(color: Colors.yellow,width: 5.0)),
+          labelStyle: TextStyle(fontSize: 18.0),
+          labelText: "zoek...",
+          alignLabelWithHint: true),
     );
   }
 }

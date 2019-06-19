@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:tools/SearchBar.dart';
 
 void main() => runApp(MyApp());
 
@@ -43,7 +44,10 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          
+          Padding(
+            padding: const EdgeInsets.all(64.0),
+            child: SearchBar(),
+          ),
         ],
       ),
     );
