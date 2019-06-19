@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tools/Appbar.dart';
+import 'package:flutter/rendering.dart';
+import 'package:tools/SearchBar.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       title: 'GereedSchap',
+
+      debugShowCheckedModeBanner: false,
+      
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -23,7 +28,20 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          Appbar(),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 90.0),
+              child: Text(
+                "GereedSchap",
+                style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.w900),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(64.0),
+            child: SearchBar(),
+          ),
         ],
       ),
     );
