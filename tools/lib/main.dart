@@ -8,7 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Gereedschap',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -27,7 +28,6 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  final title = 'Grid List';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,25 +35,15 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Align(
             alignment: Alignment.topCenter,
-            child: Text(
-              "GereedSchap",
-              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.w900),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 90.0),
+              child: Text(
+                "GereedSchap",
+                style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.w900),
+              ),
             ),
           ),
-          GridView.count(
-            // Create a grid with 2 columns. If you change the scrollDirection to
-            // horizontal, this produces 2 rows.
-            crossAxisCount: 2,
-            // Generate 100 widgets that display their index in the List.
-            children: List.generate(100, (index) {
-              return Center(
-                child: Text(
-                  'gereedschap 1 $index',
-                  style: Theme.of(context).textTheme.headline,
-                ),
-              );
-            }),
-          ),
+          
         ],
       ),
     );
